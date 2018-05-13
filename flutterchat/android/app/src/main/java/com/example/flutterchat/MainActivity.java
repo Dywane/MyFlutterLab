@@ -1,4 +1,4 @@
-package com.example.testflutter;
+package com.example.flutterchat;
 
 import android.os.Bundle;
 
