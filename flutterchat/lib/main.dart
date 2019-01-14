@@ -74,7 +74,13 @@ class ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
       data: new IconThemeData(color: Theme.of(context).accentColor),
       child: new Container(
         margin: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: new Row(
+        padding: EdgeInsets.only(bottom: SafeArea(bottom: true,).minimum.bottom),
+        child: new SafeArea(
+          top: false,
+          left: false,
+          right: false,
+          bottom: true,
+          child: new Row(
           children: <Widget>[
             new Flexible(
               child: new TextField(
@@ -97,6 +103,7 @@ class ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
             )
           ],
         ),
+        )
       ),
     );
   }
